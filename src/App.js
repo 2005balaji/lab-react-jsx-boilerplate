@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import elephant from "./images/elephant.jpeg";
 
@@ -24,7 +25,22 @@ const imageData = ()=>{
 }
 
 function App() {
+  let imgdata = imageData();
+  console.log(imgdata);
   // code here
+  return (
+  <div className='App'>
+    <h1>  Kalvium gallery    </h1>  
+    <div className='image'>
+
+      <img src={imgdata[0].img}/>
+      <img src={imgdata[1].img}/>
+      <img src={imgdata[2].img}/>
+      <img src={imgdata[3].img}/>
+    </div>
+  </div>)
+
+
 }
 
 export default App;
